@@ -1,0 +1,21 @@
+#!/bin/sh
+RED="\e[31m"
+GREEN="\e[32m"
+VIOLET="\e[35m"
+ENDCOLOR="\e[0m"
+
+echo -e "${RED}Выберите радио:${GREEN}\n 1 - FreeCode\n 2 - Choco ${VIOLET} "
+
+read -p "  ********  " radio
+
+if [ "$radio" = "1" ]
+then
+    mpg123  https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3
+fi
+
+if [ "$radio" = "2" ]
+then 
+    mpg123 http://choco.hostingradio.ru:10010/fm
+else
+    echo " Неправильно набран номер "
+fi
